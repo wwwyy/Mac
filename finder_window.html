@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		a {
+			text-decoration: none;
+		}
+		#finder_window {
+			position: relative;
+			width: 800px;
+			height: 500px;
+			border: 1px solid #000;
+			margin: 100px auto;
+		}
+		#finder_window>header {
+			background: #e6e6e6;
+			height: 60px;
+			overflow: hidden;
+		}
+		#finder_window>header strong {
+			display: block;
+			width: 100%;
+			text-align: center;
+		}
+		#finder_ctrl {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 80px;
+			height: 23px;
+		}
+		#finder_ctrl a:nth-of-type(1){
+			float: left;
+			width: 23px;
+			height: 23px;
+			transform: scale(.5);
+			background: url(mac_img/close.png) no-repeat 0 0;
+
+		}
+		#finder_ctrl a:nth-of-type(2){
+			float: left;
+			width: 23px;
+			height: 23px;
+			transform: scale(.5);
+			background: url(mac_img/min.png) no-repeat 0 0;
+
+		}
+		#finder_ctrl a:nth-of-type(3){
+			float: left;
+			width: 23px;
+			height: 23px;
+			transform: scale(.5);
+			background: url(mac_img/max.png) no-repeat 0 0;
+
+		}
+		#finder_left {
+			float: left;
+			width: 200px;
+			height: 440px;
+			background: red;
+		}
+		#finder_right {
+			float: left;
+			width: 600px;
+			height: 440px;
+			background: yellow;
+		}
+		.finder_back,
+		.finder_go {
+			float: left;
+			display: inline-block;
+			width: 30px;
+			height: 25px;
+			background:#ffffff;
+			border-radius: 5px;
+			text-align: center;
+			font:20px/25px arial;
+			color: #aaa;
+		}
+		.finder_back {
+			margin-left: 5px;
+		}
+		#finder_file_btn {
+			float: left;
+			margin-left: 200px;
+			background: #fff;
+			border-radius: 5px;
+			overflow: hidden;
+		}
+		#finder_file_btn a{
+			float: left;
+			width: 30px;
+			height: 25px;
+		}
+		#finder_file_btn a:nth-of-type(1) {
+			background: url(mac_img/file_ico1.png) no-repeat center center;
+			background-size: 60%;
+			background-color: #fff;
+		}
+		#finder_file_btn a:nth-of-type(2) {
+			background: url(mac_img/file_ico2.png) no-repeat center center;
+			background-color: #fff;
+		}
+		#finder_file_btn a:nth-of-type(3) {
+			background: url(mac_img/file_ico3.png) no-repeat center center;
+			background-size: 80%;
+			background-color: #fff;
+		}
+		#finder_file_btn a:nth-of-type(4) {
+			background: url(mac_img/file_ico4.png) no-repeat center center;
+			background-size: 80%;
+			background-color: #fff;
+		}
+		#finder_btn {
+			margin-top: 10px;
+			height: 44px;
+		}
+		#finder_btn input {
+			float: right;
+			margin-right: 30px;
+			-webkit-appearance: none;
+			width: 200px;
+			height: 24px;
+			outline: none;
+			border: none;
+			border-radius: 5px;
+			text-indent: 2em;
+		}
+	</style>
+</head>
+<body>
+	<section id="finder_window">
+		<header>
+			<strong>1111</strong>
+			<div id="finder_ctrl">
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+			</div>
+			<div id="finder_btn">
+				<a href="javascript:;" class="finder_back"><</a>
+				<a href="javascript:;" class="finder_go">></a>
+				<div id="finder_file_btn">
+					<a href="javascript:;"></a>
+					<a href="javascript:;"></a>
+					<a href="javascript:;"></a>
+					<a href="javascript:;"></a>
+				</div>
+				<input type="text" id="finder_search" name="">
+			</div>
+		</header>
+		<div id="finder_content">
+			<aside id="finder_left">
+				1
+			</aside>
+			<div id="finder_right">
+				<header id="fr_header">
+					<span>文件名</span>
+					<span>创建时间</span>
+					<span>文件大小</span>
+					<span>文件类型</span>
+				</header>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

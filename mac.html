@@ -35,13 +35,12 @@
 			background: rgb(206,206,206);
 		}
 		#mac_footer {
-			width: 870px;
-			height: 48px;
+			min-width: 1000px;
+			overflow: hidden;
+			height: auto;
 			position: absolute;
-			left: 20vw;
+			left: 35vw;
 			bottom: 0;
-			background: rgba(206,206,206,.4);
-			border-radius: 5px;
 			z-index: 22;
 		}
 		#logo {
@@ -53,10 +52,10 @@
 			-webkit-background-size: 90%;
 			background-size: 90%;
 		}
-		#mac_hearer_left {
+		#mac_header_left {
 			display: inline-block;
 		}
-		#mac_hearer_left span{
+		#mac_header_left span{
 			float: left;
 			margin-left: 10px;
 			font: bold 14px/22px "simsun",arial;
@@ -65,16 +64,16 @@
 			border-bottom: none;
 			color: #000;
 		}
-		#mac_hearer_right {
+		#mac_header_right {
 			float: right;
 		}
-		#mac_hearer_right span {
+		#mac_header_right span {
 			float: left;
 			width: 18px;
 			height: 18px;
 			margin: 2px 0 0 10px;
 		}
-		#mac_hearer_right #more {
+		#mac_header_right #more {
 			background: url(mac_img/ico/list.png) no-repeat 0 0;
 			-webkit-background-size: 100%;
 			background-size: 100%;
@@ -85,7 +84,7 @@
 			-webkit-background-size: 100%;
 			background-size: 100%;
 		}
-		#mac_hearer_right #time {
+		#mac_header_right #time {
 			width: 70px;
 			margin-right: -10px;
 			font: 12px/18px "simsun",arial;
@@ -100,7 +99,7 @@
 			-webkit-background-size: 100%;
 			background-size: 100%;
 		}
-		#mac_hearer_right #wifi {
+		#mac_header_right #wifi {
 			background: url(mac_img/ico/wifi-2.png) no-repeat 0 0;
 			-webkit-background-size: 100%;
 			background-size: 100%;
@@ -122,12 +121,13 @@
 			background-size: 100%;
 		}
 		#mac_footer span {
-			position: relative;
-			float: left;
-			width: 40px;
-			height: 40px;
-			margin: 4px 4px;
-			transition: .2s;
+			/*position: relative;*/
+			/*float: left;*/
+			display: inline-block;
+			width: 60px;
+			height: 60px;
+			padding: 4px;
+			/*transition: .2s;*/
 		}
 		.f_finder {
 			background: url(mac_img/ico/Finder.png) no-repeat 0 0;
@@ -430,7 +430,8 @@
 			right: 0;
 			top: 0;
 			margin-top: 22px;
-			width: 100vw;
+			max-width: 100vw;
+			min-width: 1000px;
 			height: 100vh;
 			z-index: 1;
 		}
@@ -500,7 +501,7 @@
 			<a href="javascript:;" id="closeEm">x</a>
 		</div>
 		<header id="mac_header">
-			<div id="mac_hearer_left">
+			<div id="mac_header_left">
 				<span id="logo"></span>
 				<span>Finder</span>
 				<span>文件</span>
@@ -510,7 +511,7 @@
 				<span>窗口</span>
 				<span>帮助</span>
 			</div>
-			<div id="mac_hearer_right">
+			<div id="mac_header_right">
 				<span id="h_wx"></span>
 				<span id="h_qq"></span>
 				<span id="wifi"></span>
@@ -525,22 +526,22 @@
 		<footer id="mac_footer">
 			<span class="f_finder"></span>
 			<span class="f_pad"></span>
-			<span class="f_safari"></span>
+			<!-- <span class="f_safari"></span> -->
 			<span class="f_calendar"></span>
 			<span class="f_contacts"></span>
-			<span class="f_facetime"></span>
+			<!-- <span class="f_facetime"></span> -->
 			<span class="f_mail"></span>
 			<span class="f_maps"></span>
 			<span class="f_notes"></span>
-			<span class="f_gamecenter"></span>
-			<span class="f_appstore"></span>
-			<span class="f_set"></span>
-			<span class="f_sublime"></span>
+			<!-- <span class="f_gamecenter"></span> -->
+			<!-- <span class="f_appstore"></span> -->
+			<!-- <span class="f_set"></span> -->
+			<!-- <span class="f_sublime"></span> -->
 			<span class="f_wx"></span>
 			<span class="f_github"></span>
-			<span class="f_chrome"></span>
+			<!-- <span class="f_chrome"></span> -->
 			<span class="f_download"></span>
-			<span class="f_dele"></span>
+			<!-- <span class="f_dele"></span> -->
 		</footer>
 		<div id="top_list">
 			<ul class="logo">
@@ -815,7 +816,8 @@
 			<li><span>为什么要使用Git。</span><img src="mac_img/ico/computer.png"></li>
 		</ul>
 	</div>
+<script type="text/javascript" src='js/jquery-3.1.1.min.js'></script>
 <script type="text/javascript" src = 'js/public.js'></script>
-<script type="text/javascript" src = 'js/mac.js'></script>
+<script type="text/javascript" src = 'js/mac_2.js'></script>
 </body>
 </html>
