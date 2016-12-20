@@ -7,12 +7,19 @@
 		a {
 			text-decoration: none;
 		}
+		ul,li {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
 		#finder_window {
 			position: relative;
 			width: 800px;
 			height: 500px;
-			border: 1px solid #000;
+			border: 1px solid #ccc;
 			margin: 100px auto;
+			border-radius: 5px;
+			overflow: hidden;
 		}
 		#finder_window>header {
 			background: #e6e6e6;
@@ -59,13 +66,12 @@
 			float: left;
 			width: 200px;
 			height: 440px;
-			background: red;
+			background: #f5f2f4;
 		}
 		#finder_right {
 			float: left;
 			width: 600px;
 			height: 440px;
-			background: yellow;
 		}
 		.finder_back,
 		.finder_go {
@@ -101,7 +107,7 @@
 		}
 		#finder_file_btn a:nth-of-type(2) {
 			background: url(mac_img/file_ico2.png) no-repeat center center;
-			background-color: #fff;
+			background-color: #ccc;
 		}
 		#finder_file_btn a:nth-of-type(3) {
 			background: url(mac_img/file_ico3.png) no-repeat center center;
@@ -128,6 +134,105 @@
 			border-radius: 5px;
 			text-indent: 2em;
 		}
+		#finder_left>strong {
+			display: block;
+			width: 100%;
+			font: 14px/24px 'simsun',arial;
+		}
+		#fl_list li {
+			height: 24px;
+			padding: 5px 0 ;
+		}
+		#fl_list span{
+			float: left;
+			width: 24px;
+			height: 24px;
+			margin-left: 15px;
+		}
+		#fl_list li:nth-of-type(1) span {
+			background: url(mac_img/app.png) no-repeat center center;
+			-webkit-background-size: 20px 20px;
+			background-size: 20px 20px;
+		}
+		#fl_list li:nth-of-type(2) span {
+			background: url(mac_img/mac_osx.png) no-repeat center center;
+			-webkit-background-size: 20px 20px;
+			background-size: 20px 20px;
+		}
+		#fl_list li:nth-of-type(3) span {
+			background: url(mac_img/music.png) no-repeat center center;
+			-webkit-background-size: 20px 20px;
+			background-size: 20px 20px;
+		}
+		#fl_list li:nth-of-type(4) span {
+			background: url(mac_img/pic.png) no-repeat center center;
+			-webkit-background-size: 20px 20px;
+			background-size: 20px 20px;
+		}
+		#fl_list li:nth-of-type(5) span {
+			background: url(mac_img/doc.png) no-repeat center center;
+			-webkit-background-size: 20px 20px;
+			background-size: 20px 20px;
+		}
+		#fl_list li:nth-of-type(6) span {
+			background: url(mac_img/dl.png) no-repeat center center;
+			-webkit-background-size: 20px 20px;
+			background-size: 20px 20px;
+		}
+		#fl_list strong {
+			float: left;
+			font: 14px/24px "simsun",arial;
+			margin-left: 5px;
+		}
+		#fr_header {
+			height: 24px;
+			background: #eeeeee;
+		}
+		#fr_header span {
+			float: left;
+			font: 14px/20px "simsun",arial;
+			margin: 2px 0;
+			box-sizing: border-box;
+		}
+		#fr_header span:nth-of-type(1){
+			width: 40%;
+			text-align: center;
+			border-right: 2px solid #ccc;
+		}
+		#fr_header span:nth-of-type(2){
+			width: 20%;
+			text-align: center;
+			border-right: 2px solid #ccc;
+		}
+		#fr_header span:nth-of-type(3){
+			width: 20%;
+			text-align: center;
+			border-right: 2px solid #ccc;
+		}
+		#fr_header span:nth-of-type(4){
+			width: 20%;
+			text-align: center;
+		}
+		#fr_list span {
+			float: left;
+			font: 12px/24px "simsun",arial;
+		}
+		#fr_list span:nth-of-type(1){
+			width: 40%;
+			text-indent: 1.5em;
+		}
+		#fr_list span:nth-of-type(2){
+			width: 20%;
+			text-indent: 1.5em;
+		}
+		#fr_list span:nth-of-type(3){
+			width: 20%;
+			text-indent: 1.5em;
+		}
+		#fr_list span:nth-of-type(4){
+			width: 20%;
+			text-indent: 1.5em;
+		}
 	</style>
 </head>
 <body>
@@ -153,15 +258,127 @@
 		</header>
 		<div id="finder_content">
 			<aside id="finder_left">
-				1
+				<strong>个人收藏</strong>
+				<ul id="fl_list">
+					<li>
+						<span></span>
+						<strong>应用程序</strong>
+					</li>
+					<li>
+						<span></span>
+						<strong>桌面</strong>
+					</li>
+					<li>
+						<span></span>
+						<strong>音乐</strong>
+					</li>
+					<li>
+						<span></span>
+						<strong>照片</strong>
+					</li>
+					<li>
+						<span></span>
+						<strong>文档</strong>
+					</li>
+					<li>
+						<span></span>
+						<strong>下载</strong>
+					</li>
+				</ul>
 			</aside>
 			<div id="finder_right">
 				<header id="fr_header">
-					<span>文件名</span>
+					<span>名称</span>
 					<span>创建时间</span>
 					<span>文件大小</span>
 					<span>文件类型</span>
 				</header>
+				<ul id="fr_list">
+					<li>
+						<span>微信web开发者工具</span>
+						<span>2016年12月20日</span>
+						<span>220MB</span>
+						<span>应用程序</span>
+					</li>
+					<li>
+						<span>微信web开发者工具</span>
+						<span>2016年12月20日</span>
+						<span>220MB</span>
+						<span>应用程序</span>
+					</li>
+					<li>
+						<span>微信web开发者工具</span>
+						<span>2016年12月20日</span>
+						<span>220MB</span>
+						<span>应用程序</span>
+					</li>
+					<li>
+						<span>微信web开发者工具</span>
+						<span>2016年12月20日</span>
+						<span>220MB</span>
+						<span>应用程序</span>
+					</li>
+					<li>
+						<span>微信web开发者工具</span>
+						<span>2016年12月20日</span>
+						<span>220MB</span>
+						<span>应用程序</span>
+					</li>
+					<li>
+						<span>微信web开发者工具</span>
+						<span>2016年12月20日</span>
+						<span>220MB</span>
+						<span>应用程序</span>
+					</li>
+					<li>
+						<span>微信web开发者工具</span>
+						<span>2016年12月20日</span>
+						<span>220MB</span>
+						<span>应用程序</span>
+					</li>
+					<li>
+						<span>微信web开发者工具</span>
+						<span>2016年12月20日</span>
+						<span>220MB</span>
+						<span>应用程序</span>
+					</li>
+					<li>
+						<span>微信web开发者工具</span>
+						<span>2016年12月20日</span>
+						<span>220MB</span>
+						<span>应用程序</span>
+					</li>
+					<li>
+						<span>微信web开发者工具</span>
+						<span>2016年12月20日</span>
+						<span>220MB</span>
+						<span>应用程序</span>
+					</li>
+					<li>
+						<span>微信web开发者工具</span>
+						<span>2016年12月20日</span>
+						<span>220MB</span>
+						<span>应用程序</span>
+					</li>
+					<li>
+						<span>微信web开发者工具</span>
+						<span>2016年12月20日</span>
+						<span>220MB</span>
+						<span>应用程序</span>
+					</li>
+					<li>
+						<span>微信web开发者工具</span>
+						<span>2016年12月20日</span>
+						<span>220MB</span>
+						<span>应用程序</span>
+					</li>
+					<li>
+						<span>微信web开发者工具</span>
+						<span>2016年12月20日</span>
+						<span>220MB</span>
+						<span>应用程序</span>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</section>
