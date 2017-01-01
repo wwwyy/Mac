@@ -72,6 +72,7 @@
 			float: left;
 			width: 600px;
 			height: 440px;
+			overflow: auto;
 		}
 		.finder_back,
 		.finder_go {
@@ -188,6 +189,10 @@
 			height: 24px;
 			background: #eeeeee;
 		}
+		#fr_list li {
+			width: 100%;
+			height: 24px;
+		}
 		#fr_header span {
 			float: left;
 			font: 14px/20px "simsun",arial;
@@ -233,6 +238,32 @@
 			width: 20%;
 			text-indent: 1.5em;
 		}
+		.active {
+			background: #ccc;
+		}
+		#fr_list {
+			width: 100%;
+			height: auto;
+		}
+		#fr_list .fr_p {
+			float: left;
+			width: 120px;
+			height: 120px;
+			margin: 15px 13px 0 13px;
+		}
+		.fr_pic {
+			width: 100px;
+			height: 100px;
+			margin: 0 10px 0;
+			background: pink;
+		}
+		.fr_title {
+			display: block;
+			width: 100%;
+			height: 20px;
+			font:16px/20px "simsun";
+			text-align: center;
+		}
 	</style>
 </head>
 <body>
@@ -260,27 +291,27 @@
 			<aside id="finder_left">
 				<strong>个人收藏</strong>
 				<ul id="fl_list">
-					<li>
+					<li name="中国" class="active">
 						<span></span>
-						<strong>应用程序</strong>
+						<strong>电影</strong>
 					</li>
-					<li>
+					<li name="动漫">
 						<span></span>
 						<strong>桌面</strong>
 					</li>
-					<li>
+					<li name="科幻">
 						<span></span>
 						<strong>音乐</strong>
 					</li>
-					<li>
+					<li name="爱情">
 						<span></span>
 						<strong>照片</strong>
 					</li>
-					<li>
+					<li name='史诗'>
 						<span></span>
 						<strong>文档</strong>
 					</li>
-					<li>
+					<li name='漫威'>
 						<span></span>
 						<strong>下载</strong>
 					</li>
@@ -294,7 +325,7 @@
 					<span>文件类型</span>
 				</header>
 				<ul id="fr_list">
-					<li>
+					<!-- <li>
 						<span>微信web开发者工具</span>
 						<span>2016年12月20日</span>
 						<span>220MB</span>
@@ -377,10 +408,114 @@
 						<span>2016年12月20日</span>
 						<span>220MB</span>
 						<span>应用程序</span>
+					</li> -->
+					<li class="fr_p">
+						<div class="fr_pic">
+
+						</div>
+						<strong class="fr_title">应用程序</strong>
+					</li>
+					<li class="fr_p">
+						<div class="fr_pic">
+
+						</div>
+						<strong class="fr_title">应用程序</strong>
+					</li>
+					<li class="fr_p">
+						<div class="fr_pic">
+
+						</div>
+						<strong class="fr_title">应用程序</strong>
+					</li>
+					<li class="fr_p">
+						<div class="fr_pic">
+
+						</div>
+						<strong class="fr_title">应用程序</strong>
+					</li>
+					<li class="fr_p">
+						<div class="fr_pic">
+
+						</div>
+						<strong class="fr_title">应用程序</strong>
+					</li>
+					<li class="fr_p">
+						<div class="fr_pic">
+
+						</div>
+						<strong class="fr_title">应用程序</strong>
+					</li>
+					<li class="fr_p">
+						<div class="fr_pic">
+
+						</div>
+						<strong class="fr_title">应用程序</strong>
+					</li>
+					<li class="fr_p">
+						<div class="fr_pic">
+
+						</div>
+						<strong class="fr_title">应用程序</strong>
+					</li>
+					<li class="fr_p">
+						<div class="fr_pic">
+
+						</div>
+						<strong class="fr_title">应用程序</strong>
+					</li>
+					<li class="fr_p">
+						<div class="fr_pic">
+
+						</div>
+						<strong class="fr_title">应用程序</strong>
+					</li>
+					<li class="fr_p">
+						<div class="fr_pic">
+
+						</div>
+						<strong class="fr_title">应用程序</strong>
+					</li>
+					<li class="fr_p">
+						<div class="fr_pic">
+
+						</div>
+						<strong class="fr_title">应用程序</strong>
+					</li>
+					<li class="fr_p">
+						<div class="fr_pic">
+
+						</div>
+						<strong class="fr_title">应用程序</strong>
+					</li>
+					<li class="fr_p">
+						<div class="fr_pic">
+
+						</div>
+						<strong class="fr_title">应用程序</strong>
+					</li>
+					<li class="fr_p">
+						<div class="fr_pic">
+
+						</div>
+						<strong class="fr_title">应用程序</strong>
+					</li>
+					<li class="fr_p">
+						<div class="fr_pic">
+
+						</div>
+						<strong class="fr_title">应用程序</strong>
+					</li>
+					<li class="fr_p">
+						<div class="fr_pic">
+
+						</div>
+						<strong class="fr_title">应用程序</strong>
 					</li>
 				</ul>
 			</div>
 		</div>
 	</section>
+<script type="text/javascript" src='js/jquery-3.1.1.min.js'></script>
+<script src="js/dbData.js" charset="utf-8"></script>
 </body>
 </html>
